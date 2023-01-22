@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://kit.fontawesome.com/99033a2d42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    {{ $stylesheet := resources.Get "css/style.css"}}
+    <link rel="stylesheet" href="{{ $stylesheet.RelPermalink}}" />
     <title>{{ $title }}</title>
 </head>

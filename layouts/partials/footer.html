@@ -1,2 +1,3 @@
 <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.min.js"></script>
-<script src="/js/main.js"></script>
+{{ $jsFile := resources.Get "js/main.js"}}
+<script src="{{ $jsFile.RelPermalink }}"></script>
