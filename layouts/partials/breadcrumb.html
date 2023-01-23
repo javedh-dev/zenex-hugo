@@ -15,10 +15,10 @@
             {{- end -}}
             {{- if eq ($.Scratch.Get "isPage") "true" -}}
                 {{- with $.Site.GetPage (print . ".md") -}}
-                <li><a href="{{ $.Scratch.Get `url` }}">{{ .Title }}</a></li>
+                <li><a href="{{ $.Scratch.Get `url` }}">{{ .Title | truncate 10  }}</a></li>
                 {{- end -}}
             {{- else -}}
-                <li><a href="{{ $.Scratch.Get `url` }}">{{ humanize . }}</a></li>
+                <li><a href="{{ $.Scratch.Get `url` }}">{{ (humanize .) | truncate 10 }}</a></li>
             {{- end -}}
         {{- end -}}
     {{- end -}}
