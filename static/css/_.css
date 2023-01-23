@@ -57,7 +57,7 @@ body {
 
 .rightpart {
   @apply transition-all;
-  @apply flex flex-row items-center px-8 lg:pl-32;
+  @apply flex flex-row items-center px-2 lg:pl-32;
 }
 
 .profile-img {
@@ -115,6 +115,10 @@ pre[class*="language-"] button:hover {
 
 .menu > ul,ol {
   @apply list-none;
+}
+
+footer a {
+  @apply border-dashed border-b ;
 }
 
 /* General Styling */

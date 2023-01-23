@@ -10,7 +10,6 @@
                 {{ .Site.Params.summary | markdownify }}
             </p>
             <div class="flex flex-row gap-8 mt-10 fa-2x lg:justify-start justify-center">
-
                 {{ range .Site.Menus.social }}
                 <div class="cursor-pointer k-hover">
                     <a class="nav-link" href="{{ .URL }}" target="_blank">
@@ -24,6 +23,5 @@
             </div>
         </div>
     </div>
-
 </div>
 {{ end }}
