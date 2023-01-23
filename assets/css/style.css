@@ -564,6 +564,11 @@ video {
   margin-bottom: 2rem;
 }
 
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -829,6 +834,11 @@ video {
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pl-1{
