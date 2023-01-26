@@ -46,9 +46,9 @@ body {
 }
 
 .leftpart {
-  @apply transition-all z-10;
-  @apply flex-row items-center lg:sticky top-0 fixed h-screen w-full lg:w-1/4 backdrop-blur-sm;
-  @apply lg:opacity-100 opacity-0 lg:translate-x-0 -translate-x-full;
+  @apply transition-all;
+  @apply flex-row items-center xl:sticky top-0 fixed h-screen w-full xl:w-1/4 backdrop-blur-sm;
+  @apply xl:opacity-100 opacity-0 xl:translate-x-0 -translate-x-full;
 }
 
 .show {
@@ -62,7 +62,7 @@ body {
 
 .profile-img {
   @apply bg-cover bg-no-repeat bg-center;
-  @apply min-h-[150px] min-w-[150px] xl:min-h-[250px] xl:min-w-[250px];
+  @apply min-h-[150px] min-w-[150px] lg:min-h-[250px] lg:min-w-[250px];
   @apply shadow-[inset_0px_0px_0px_3px_rgba(0,0,0,0.2)] xl:shadow-[inset_0px_0px_0px_8px_rgba(0,0,0,0.2)];
   @apply bg-[url("../images/me_javed.jpg")];
   @apply animate-bw;

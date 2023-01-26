@@ -3,14 +3,16 @@
 //   color: "#FFF",
 // });
 
-const toggleMenu = (event) => {
+const toggleMenu = () => {
   const menu = document.getElementById("menu");
   menu.classList.toggle("show");
-  event.srcElement.classList.toggle("-rotate-90");
-  event.srcElement.classList.toggle("rotate-90");
+  const menuIcon = document.getElementById("menu-icon");
+  menuIcon.classList.toggle("-rotate-90");
+  menuIcon.classList.toggle("rotate-90");
 
   // menu.classList.toggle("slide-in")
 };
+
 
 const setupTheme = () => {
   const body = document.getElementById("body");

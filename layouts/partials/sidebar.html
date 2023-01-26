@@ -1,9 +1,9 @@
 <div class="topbar">
-    <div class="flex flex-row z-50 items-center gap-4 px-4 lg:px-8 align-middle flex-grow">
-        <button class=" md:hidden" onclick="toggleMenu(event)">
-            <i class="fa-solid fa-circle-chevron-down fa-2x -rotate-90 transition-all"></i>
+    <div class="flex flex-row z-10 items-center gap-4 px-4 xl:px-8 align-middle flex-grow">
+        <button class=" xl:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-circle-chevron-down fa-2x -rotate-90 transition-all" id="menu-icon"></i>
         </button>
-        <a class="md:hidden text-4xl font-bold flex-grow" href="/">
+        <a class="xl:hidden text-4xl font-bold flex-grow" href="/">
             <span class="dark:text-amber-500 text-amber-700">J</span><span>H</span>
         </a>
         <button class="text-2xl ml-auto" onclick="toggleDarkMode()">
@@ -13,9 +13,9 @@
 </div>
 
 <div class="leftpart flex" id="menu" onclick="toggleMenu()">
-    <div class="backdrop-blur-sm dark:bg-slate-800 bg-slate-100 lg:flex-grow h-screen p-16">
+    <div class="backdrop-blur-sm dark:bg-slate-800 bg-slate-100 xl:flex-grow h-screen p-16">
         <div class="flex flex-col h-full gap-2">
-            <a class="text-4xl [font-weight:900] tracking-widest hidden md:block" href="/">
+            <a class="text-4xl [font-weight:900] tracking-widest hidden xl:block" href="/">
                 <span class="dark:text-amber-500 text-amber-700">J</span><span>H</span>
             </a>
             {{$currentPage := . }}
