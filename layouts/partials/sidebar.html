@@ -11,34 +11,37 @@
         </button>
     </div>
 </div>
-<div class="leftpart flex" id="menu">
-    <div class="flex flex-col h-full gap-2">
-        <a class="text-4xl [font-weight:900] tracking-widest hidden md:block" href="/">
-            <span class="dark:text-amber-500 text-amber-700">J</span><span>H</span>
-        </a>
-        {{$currentPage := . }}
-        <div class="flex flex-grow items-center menu">
-            <ul class="flex flex-col gap-5 font-semibold text-gray-400">
-                {{ range .Site.Menus.main }}
-                {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-                {{- $page_url:= ($currentPage.Permalink | absLangURL) }}
-                <li class="k-hover cursor-pointer {{ if eq $menu_item_url $page_url }}active{{end}}">
-                    <a class="nav-link" href="{{ .URL }}">
-                        <h5>
-                            {{ if .Pre }}
-                            {{ $icon := printf "<i class=\"fa-solid fa-%s mr-2\"></i> " .Pre | safeHTML }}
-                            {{ $icon }}
-                            {{ end }}
-                            {{ $text := print .Name | safeHTML }}
-                            {{ $text }}
-                        </h5>
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-        </div>
-        <div class="text-sm">
-            <p>©2023 Javed Tech</p>
+
+<div class="leftpart flex" id="menu" onclick="toggleMenu()">
+    <div class="backdrop-blur-sm dark:bg-slate-800 bg-slate-100 lg:flex-grow h-screen p-16">
+        <div class="flex flex-col h-full gap-2">
+            <a class="text-4xl [font-weight:900] tracking-widest hidden md:block" href="/">
+                <span class="dark:text-amber-500 text-amber-700">J</span><span>H</span>
+            </a>
+            {{$currentPage := . }}
+            <div class="flex flex-grow items-center menu">
+                <ul class="flex flex-col gap-5 font-semibold text-gray-400">
+                    {{ range .Site.Menus.main }}
+                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+                    {{- $page_url:= ($currentPage.Permalink | absLangURL) }}
+                    <li class="k-hover cursor-pointer {{ if eq $menu_item_url $page_url }}active{{end}}">
+                        <a class="nav-link" href="{{ .URL }}">
+                            <h5>
+                                {{ if .Pre }}
+                                {{ $icon := printf "<i class=\"fa-solid fa-%s mr-2\"></i> " .Pre | safeHTML }}
+                                {{ $icon }}
+                                {{ end }}
+                                {{ $text := print .Name | safeHTML }}
+                                {{ $text }}
+                            </h5>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="text-sm">
+                <p>©2023 Javed Tech</p>
+            </div>
         </div>
     </div>
 </div>

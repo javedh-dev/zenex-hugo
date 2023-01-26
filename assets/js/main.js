@@ -6,8 +6,9 @@
 const toggleMenu = (event) => {
   const menu = document.getElementById("menu");
   menu.classList.toggle("show");
-  event.srcElement.classList.toggle("rotate-90");
   event.srcElement.classList.toggle("-rotate-90");
+  event.srcElement.classList.toggle("rotate-90");
+
   // menu.classList.toggle("slide-in")
 };
 

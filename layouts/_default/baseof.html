@@ -3,11 +3,11 @@
 {{- partial "head.html" . -}}
 
 <body id="body">
-    <div class="dark:bg-slate-900 bg-white transition-colors min-w-screen min-h-screen">
+    <div class="dark:bg-slate-900 bg-white transition-colors w-screen min-h-screen">
         {{- partial "header.html" . -}}
         <div class="main flex flex-row dark:text-white text-black">
             {{- partial "sidebar.html" . -}}
-            <div id="content" class="w-full lg:px-24 px-4 dark:bg-slate-900 bg-slate-50">
+            <div id="content" class="flex-grow lg:px-24 px-4 dark:bg-slate-900 bg-slate-50">
                 {{- block "main" . }}{{- end }}
             </div>
         </div>

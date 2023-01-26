@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./layouts/**/*.{html,js,css}",
     "./static/**/*.{html,js,css}",
+    "./assets/**/*.{html,js,css}"
   ],
   darkMode: 'class',
   theme: {
