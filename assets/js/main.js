@@ -46,13 +46,13 @@ const toggleDarkMode = () => {
   setupTheme();
 };
 
-const els = document.querySelectorAll(".k-hover");
+// const els = document.querySelectorAll(".k-hover");
 
-els.forEach((item) => {
-  item.addEventListener("mouseover", () => {
-    console.log("Bhai me aa Gaya");
-  });
-});
+// els.forEach((item) => {
+//   item.addEventListener("mouseover", () => {
+//     console.log("Bhai me aa Gaya");
+//   });
+// });
 
 hljs.highlightAll();
 

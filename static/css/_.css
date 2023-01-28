@@ -46,7 +46,7 @@ body {
 }
 
 .leftpart {
-  @apply transition-all;
+  @apply transition-all z-10;
   @apply flex-row items-center xl:sticky top-0 fixed h-screen w-full xl:w-1/4 backdrop-blur-sm;
   @apply xl:opacity-100 opacity-0 xl:translate-x-0 -translate-x-full;
 }
@@ -90,12 +90,13 @@ pre {
 }
 
 .hljs {
-  @apply bg-slate-800 !important;
+  @apply dark:bg-slate-800 bg-slate-100 !important;
 }
 
 pre {
   position: relative;
   overflow: auto;
+  max-width: 90vw;
 }
 
 pre button {
@@ -119,6 +120,29 @@ pre[class*="language-"] button:hover {
 
 footer a {
   @apply border-dashed border-b ;
+}
+
+.timeline:before{
+  @apply w-[1px] bg-amber-700 h-full absolute left-[1px];
+  content: '';
+}
+
+.timeline li{
+  @apply relative ml-6;
+}
+
+.timeline li:before {
+  @apply absolute self-center h-5 w-5 bg-amber-700 rounded-full -left-8 top-1;
+  content: '';
+  /* position: absolute;
+  align-self: center;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border-radius: 100%;
+  border: solid 1px #ccc;
+  left: -32px;
+  top: 2px */
 }
 
 /* General Styling */
