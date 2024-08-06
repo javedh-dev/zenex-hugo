@@ -1,18 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-{{- partial "head.html" . -}}
+    {{- partial "head.html" . -}}
 
-<body id="body">
-    <div class="dark:bg-slate-900 bg-white transition-colors w-screen min-h-screen">
-        {{- partial "header.html" . -}}
-        <div class="main flex flex-row dark:text-white text-black">
-            {{- partial "sidebar.html" . -}}
-            <div id="content" class="flex-grow xl:px-24 px-4 dark:bg-slate-900 bg-slate-50 max-w-[100vw]">
+    <body id="body" class="bg-white dark:bg-theme-950 text-black dark:text-white flex flex-row">
+        <div class="min-h-screen flex flex-col items-center">
+            {{- partial "header.html" . -}}
+            <div class="px-48 w-full h-[500px] relative">
                 {{- block "main" . }}{{- end }}
             </div>
+            {{- partial "footer.html" . -}}
         </div>
-        {{- partial "footer.html" . -}}
-    </div>
-</body>
-
+    </body>
 </html>

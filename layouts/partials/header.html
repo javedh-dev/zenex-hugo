@@ -1,0 +1,26 @@
+<div class="flex flex-row px-12 py-4 w-screen">
+    <div class="logo"><span class="text-red-500">J</span>H</div>
+
+    {{$currentPage := . }}
+    <div class="flex flex-grow items-center menu justify-end">
+        <ul class="flex flex-row gap-12 text-gray-400 uppercase">
+            {{ range .Site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $page_url:= ($currentPage.Permalink | absLangURL) }}
+            <li class="k-hover cursor-pointer {{ if eq $menu_item_url $page_url }}text-red-500{{end}}">
+                <a class="nav-link" href="{{ .URL }}">
+                    <h5>
+                        {{ if .Pre }}
+                        {{ $icon := printf "<i class=\"fa-solid fa-%s mr-2\"></i> " .Pre | safeHTML }}
+                        {{ $icon }}
+                        {{ end }}
+                        {{ $text := print .Name | safeHTML }}
+                        {{ $text }}
+                    </h5>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+</div>
