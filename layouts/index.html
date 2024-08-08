@@ -18,7 +18,7 @@
         I'm <span class="text-red-500">Javed</span> Hussain
       </div>
       <div class="mt-8 leading-8 text-justify">{{ .Site.Params.summary | markdownify }}</div>
-      <div class="flex flex-row gap-8 fa-2x lg:justify-start justify-center lg:mt-24 mt-8">
+      <div class="flex flex-row lg:gap-8 gap-6 fa-2x lg:justify-start justify-center lg:mt-24 my-8">
         {{ range .Site.Menus.social }}
         <div class="cursor-pointer k-hover">
             <a class="hover:text-red-600" href="{{ .URL }}" target="_blank">

@@ -717,6 +717,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-32{
+  margin-top: 8rem;
+}
+
 .block{
   display: block;
 }
@@ -777,8 +781,8 @@ video {
   max-height: 12rem;
 }
 
-.min-h-\[250px\]{
-  min-height: 250px;
+.max-h-screen{
+  max-height: 100vh;
 }
 
 .min-h-screen{
@@ -791,6 +795,10 @@ video {
 
 .w-10{
   width: 2.5rem;
+}
+
+.w-2{
+  width: 0.5rem;
 }
 
 .w-4{
@@ -963,6 +971,10 @@ video {
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
 }
 
 .self-center{
@@ -1519,17 +1531,14 @@ body {
 }
 
 .hero-wrapper{
-  position: static;
   margin-left: 1rem;
   margin-right: 1rem;
   height: auto;
-  min-height: 250px;
   width: auto;
 }
 
 @media (min-width: 1024px){
   .hero-wrapper{
-    position: relative;
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -1543,7 +1552,6 @@ body {
 }
 
 .hero-inner{
-  position: static;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -1552,9 +1560,8 @@ body {
 
 @media (min-width: 1024px){
   .hero-inner{
-    position: absolute;
-    top: 33.333333%;
-    width: 50%;
+    margin-top: 8rem;
+    width: 66.666667%;
   }
 }
 
@@ -1636,32 +1643,24 @@ body {
     position: fixed;
   }
 
-  .lg\:absolute{
-    position: absolute;
-  }
-
-  .lg\:relative{
-    position: relative;
-  }
-
   .lg\:bottom-0{
     bottom: 0px;
-  }
-
-  .lg\:top-1\/3{
-    top: 33.333333%;
   }
 
   .lg\:mt-24{
     margin-top: 6rem;
   }
 
+  .lg\:mt-32{
+    margin-top: 8rem;
+  }
+
   .lg\:h-auto{
     height: auto;
   }
 
-  .lg\:w-1\/2{
-    width: 50%;
+  .lg\:w-2\/3{
+    width: 66.666667%;
   }
 
   .lg\:w-auto{
@@ -1674,6 +1673,10 @@ body {
 
   .lg\:justify-start{
     justify-content: flex-start;
+  }
+
+  .lg\:gap-8{
+    gap: 2rem;
   }
 
   .lg\:rounded-none{
