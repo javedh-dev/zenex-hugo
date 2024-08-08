@@ -35,6 +35,6 @@ body {
 }
 
 .hero-image {
-  @apply w-[250px] h-[250px] overflow-hidden rounded-full shadow-2xl;
+  @apply w-[200px] h-[200px] overflow-hidden rounded-full shadow-2xl dark:shadow-black p-4;
   @apply lg:fixed lg:bottom-0 xl:right-28 right-8 -z-10 lg:w-auto lg:h-auto lg:rounded-none lg:shadow-none;
 }
