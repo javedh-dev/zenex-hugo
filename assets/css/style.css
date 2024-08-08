@@ -640,6 +640,11 @@ video {
   z-index: 50;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -756,10 +761,6 @@ video {
   height: 250px;
 }
 
-.h-\[500px\]{
-  height: 500px;
-}
-
 .h-auto{
   height: auto;
 }
@@ -774,6 +775,10 @@ video {
 
 .max-h-48{
   max-height: 12rem;
+}
+
+.min-h-\[250px\]{
+  min-height: 250px;
 }
 
 .min-h-screen{
@@ -1220,16 +1225,16 @@ video {
   padding-bottom: 2rem;
 }
 
+.pb-24{
+  padding-bottom: 6rem;
+}
+
 .pl-1{
   padding-left: 0.25rem;
 }
 
 .pl-32{
   padding-left: 8rem;
-}
-
-.pb-24{
-  padding-bottom: 6rem;
 }
 
 .text-left{
@@ -1497,11 +1502,8 @@ video {
   }
 }
 
-.root{
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
+.root {
+  /* @apply min-h-screen flex flex-col items-center; */
 }
 
 .logo{
@@ -1511,15 +1513,17 @@ video {
 }
 
 .hero-wrapper{
-  height: 500px;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  position: static;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: auto;
+  min-height: 250px;
+  width: auto;
 }
 
 @media (min-width: 1024px){
   .hero-wrapper{
     position: relative;
-    width: 100%;
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -1533,6 +1537,7 @@ video {
 }
 
 .hero-inner{
+  position: static;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -1641,6 +1646,10 @@ video {
     top: 33.333333%;
   }
 
+  .lg\:mt-24{
+    margin-top: 6rem;
+  }
+
   .lg\:h-auto{
     height: auto;
   }
@@ -1651,10 +1660,6 @@ video {
 
   .lg\:w-auto{
     width: auto;
-  }
-
-  .lg\:w-full{
-    width: 100%;
   }
 
   .lg\:max-w-3xl{
@@ -1754,4 +1759,3 @@ video {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
-
