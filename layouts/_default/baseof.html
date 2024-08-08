@@ -1,14 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
+  {{- partial "head.html" . -}}
 
-    <body id="body" class="bg-white dark:bg-theme-950 text-black dark:text-white flex flex-row">
-        <div class="min-h-screen flex flex-col items-center">
-            {{- partial "header.html" . -}}
-            <div class="px-48 w-full h-[500px] relative">
-                {{- block "main" . }}{{- end }}
-            </div>
-            {{- partial "footer.html" . -}}
-        </div>
-    </body>
+  <body id="body">
+    <div class="root">
+      <!-- prettier-ignore -->
+      {{- partial "header.html" . -}}
+      {{- block "main" . }}{{- end }}
+      {{- partial "footer.html" . -}}
+    </div>
+  </body>
 </html>
