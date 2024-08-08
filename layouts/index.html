@@ -1,21 +1,23 @@
 {{ define "main" }}
-<div class="px-48 w-full h-[500px] relative">
-  <div class="absolute top-1/3 w-1/2">
-    <div class="flex flex-row text-2xl uppercase items-center gap-4">
-      <span class="w-8 border border-black dark:border-white"></span
-      ><span>Hello</span>
-    </div>
-
-    <div class="text-7xl font-bold mt-4">
-      I'm <span class="text-red-500">Javed</span> Hussain
-    </div>
-    <div class="mt-8 leading-8">{{ .Site.Params.summary | markdownify }}</div>
-    <div class="fixed bottom-0 right-28">
+<div class="hero-wrapper">
+  <div class="hero-inner">
+    <div class="hero-image">
       <img
         src="images/javed.png"
         alt="javed"
         class="saturate-0 brightness-150"
       />
+    </div>
+    <div class="md:mt-0 mt-8">
+      <div class="flex flex-row xl:text-2xl uppercase items-center gap-4">
+        <span class="md:w-8 w-4 border border-black dark:border-white"></span
+        ><span>Hello,</span>
+      </div>
+
+      <div class="xl:text-6xl md:text-5xl text-3xl font-bold mt-8 md:text-left text-center">
+        I'm <span class="text-red-500">Javed</span> Hussain
+      </div>
+      <div class="mt-8 leading-8 text-justify">{{ .Site.Params.summary | markdownify }}</div>
     </div>
   </div>
 </div>
