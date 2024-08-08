@@ -568,6 +568,10 @@ video {
   visibility: collapse;
 }
 
+.static{
+  position: static;
+}
+
 .fixed{
   position: fixed;
 }
@@ -1181,6 +1185,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-44{
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
 .px-48{
   padding-left: 12rem;
   padding-right: 12rem;
@@ -1217,6 +1226,10 @@ video {
 
 .pl-32{
   padding-left: 8rem;
+}
+
+.pb-24{
+  padding-bottom: 6rem;
 }
 
 .text-left{
@@ -1514,8 +1527,8 @@ video {
 
 @media (min-width: 1280px){
   .hero-wrapper{
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
 }
 
@@ -1679,9 +1692,9 @@ video {
     flex-grow: 1;
   }
 
-  .xl\:px-48{
-    padding-left: 12rem;
-    padding-right: 12rem;
+  .xl\:px-44{
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
 
   .xl\:px-8{

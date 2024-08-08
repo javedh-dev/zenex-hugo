@@ -21,7 +21,7 @@
 }
 
 .hero-wrapper {
-  @apply xl:px-48 lg:px-16 px-12 lg:w-full h-[500px] lg:relative;
+  @apply xl:px-44 lg:px-16 px-12 lg:w-full h-[500px] lg:relative;
 }
 
 .hero-inner {

@@ -1,17 +1,4 @@
-<div class="fixed w-full bottom-8 flex flex-row gap-8 px-12 py-4 fa-2x lg:justify-start justify-center">
-    {{ range .Site.Menus.social }}
-    <div class="cursor-pointer k-hover">
-        <a class="hover:text-red-600" href="{{ .URL }}" target="_blank">
-            {{ if .Pre }}
-            {{ $icon := printf "<i class=\"%s mr-2\"></i> " .Pre | safeHTML }}
-            {{ $icon }}
-            {{ end }}
-        </a>
-    </div>
-    {{ end }}
-</div>
-<!-- <footer>
-    
+<!-- <footer>  
     <div
         class="bottom-0 text-sm py-2 flex flex-row items-center justify-center w-full fixed dark:text-white backdrop-blur-sm">
         Made with ❤️ using&nbsp;
