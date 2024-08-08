@@ -1480,6 +1480,12 @@ video {
   font-weight: 900;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   font-family: "Montserrat";
 }
